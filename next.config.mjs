@@ -8,6 +8,12 @@ const nextConfig = {
     domains: ["localhost", "cdn.palmsbet.com"],
     unoptimized: true,
   },
+  compiler: {
+    styledComponents: true,
+  },
+  output: "export",
+  basePath: "/projects/telematic",
+  assetPrefix: "/projects/telematic",
 };
 
 export default withNextIntl(nextConfig);

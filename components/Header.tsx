@@ -2,6 +2,7 @@
 
 import { Typography, Box } from "@mui/material";
 import { useTranslations } from "next-intl";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Header() {
   const t = useTranslations("Index");
@@ -11,6 +12,7 @@ export default function Header() {
       <Typography variant="h5" role="heading">
         {t("app_name")}
       </Typography>
+      <LocaleSwitcher />
     </Box>
   );
 }

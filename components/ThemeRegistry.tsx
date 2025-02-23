@@ -11,7 +11,7 @@ export default function ThemeRegistry({
 }: {
   children: React.ReactNode;
 }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");

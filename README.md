@@ -53,7 +53,7 @@ Then, open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
----
+## Visit the static version of the app at [https://ivaylotsochev.com/projects/telematic/](https://ivaylotsochev.com/projects/telematic/)
 
 ## ✅ Running Tests
 
