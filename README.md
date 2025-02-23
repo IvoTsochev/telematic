@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎰 Casino Games - Next.js 15 & React 19
 
-## Getting Started
+![App Screenshot](public/screenshot.png)
 
-First, run the development server:
+A **Next.js 15 & React 19** application that displays casino games with responsive design, pagination, dark mode, and localization.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- 🔥 **Built with Next.js 15 & React 19**
+- 🎨 **Dark Mode & Light Mode Toggle**
+- 🌍 **Multi-language support (English & Bulgarian)**
+- 📱 **Fully responsive design**
+- 🏎️ **Optimized image loading with `next/image`**
+- 🔍 **Pagination for better performance**
+- ✅ **Unit tested with Jest & React Testing Library**
+
+---
+
+## ⚡ Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [Material UI v5](https://mui.com/)
+- [Styled Components](https://styled-components.com/)
+- [next-i18next](https://github.com/i18next/next-i18next) (Localization)
+- [React Testing Library](https://testing-library.com/)
+- [Jest](https://jestjs.io/) (Unit Testing)
+
+---
+
+## 📥 Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/yourusername/casino-games.git
+cd casino-games
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ Run the Development Server
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Then, open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔨 Build for Production
 
-## Deploy on Vercel
+To create an optimized production build, run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This will generate a static site using **Next.js `next export`**.
+
+---
+
+## ✅ Running Tests
+
+```sh
+npm test -- --all
+```
+
+---
+
+## 📸 Screenshot
+
+You can find the latest screenshot of the app in the `/public/` directory.
+
+---
+
+## 📜 License
+
+This project is **open-source** and available under the [MIT License](LICENSE).
