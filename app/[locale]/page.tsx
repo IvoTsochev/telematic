@@ -1,5 +1,5 @@
 // Components
-import Games from "../components/Games";
+import Games from "../../components/Games";
 
 export default function Home() {
   return <Games />;

@@ -13,6 +13,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 function Games() {
   const [games, setGames] = useState<IGame[]>([]);
@@ -20,6 +21,8 @@ function Games() {
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+
+  const t = useTranslations("Index");
 
   useEffect(() => {
     async function fetchGames() {
@@ -34,7 +37,7 @@ function Games() {
 
         setGames(filteredGames);
       } catch (err) {
-        setError(err.message);
+        setError((err as Error).message);
         console.error("Fetch error:", err);
       } finally {
         setLoading(false);
@@ -133,11 +136,11 @@ function Games() {
           disabled={currentPage === 1}
           role="button"
         >
-          Previous
+          {t("previous")}
         </Button>
 
         <Typography display="inline" variant="body1">
-          {currentPage} of {totalPages}
+          {currentPage} {t("of")} {totalPages}
         </Typography>
 
         <Button
@@ -146,7 +149,7 @@ function Games() {
           onClick={() => setCurrentPage((prev) => prev + 1)}
           disabled={currentPage === totalPages}
         >
-          Next
+          {t("next")}
         </Button>
       </div>
     </>

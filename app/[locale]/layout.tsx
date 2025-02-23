@@ -3,6 +3,11 @@ import localFont from "next/font/local";
 import ThemeRegistry from "@/components/ThemeRegistry";
 import Header from "@/components/Header";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+
 import "./globals.css";
 
 const geistSans = localFont({
@@ -23,16 +28,29 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
+  params: { locale: string };
 }
 
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: RootLayoutProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeRegistry>
-          <Header />
-          {children}
-        </ThemeRegistry>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeRegistry>
+            <Header />
+            {children}
+          </ThemeRegistry>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

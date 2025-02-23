@@ -1,12 +1,12 @@
-# 🎰 Casino Games - Next.js 15 & React 19
+# 🎰 Casino Games - Next.js 14 & React 18
 
 ![App Screenshot](public/screenshot.png)
 
-A **Next.js 15 & React 19** application that displays casino games with responsive design, pagination, dark mode, and localization.
+A **Next.js 14 & React 18** application that displays casino games with responsive design, pagination, dark mode, and localization.
 
 ## 🚀 Features
 
-- 🔥 **Built with Next.js 15 & React 19**
+- 🔥 **Built with Next.js 14 & React 18**
 - 🎨 **Dark Mode & Light Mode Toggle**
 - 🌍 **Multi-language support (English & Bulgarian)**
 - 📱 **Fully responsive design**
@@ -18,8 +18,8 @@ A **Next.js 15 & React 19** application that displays casino games with responsi
 
 ## ⚡ Tech Stack
 
-- [Next.js 15](https://nextjs.org/)
-- [React 19](https://react.dev/)
+- [Next.js 14](https://nextjs.org/)
+- [React 18](https://react.dev/)
 - [Material UI v5](https://mui.com/)
 - [Styled Components](https://styled-components.com/)
 - [next-i18next](https://github.com/i18next/next-i18next) (Localization)
@@ -33,8 +33,8 @@ A **Next.js 15 & React 19** application that displays casino games with responsi
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/casino-games.git
-cd casino-games
+git clone https://github.com/IvoTsochev/telematic.git
+cd telematic
 ```
 
 ### 2️⃣ Install Dependencies
@@ -52,17 +52,6 @@ npm run dev
 Then, open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
-
-## 🔨 Build for Production
-
-To create an optimized production build, run:
-
-```sh
-npm run build
-npm start
-```
-
-This will generate a static site using **Next.js `next export`**.
 
 ---
 
